@@ -1,0 +1,39 @@
+﻿# Archivos de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Binarios y objetos compilados
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Configs del sistema
+*.DS_Store
+Thumbs.db
+
+# Archivos de publicación
+*.publishsettings
+
+# Archivos de Rider (si alguno labura con JetBrains)
+.idea/
+
+# Archivos de migraciones generados por EF que no quieras trackear (opcional)
+# Migrations/
+
+# Archivos de test y coverage (opcional)
+TestResults/
+*.coverage
+*.coveragexml
+
+# Archivos de entorno
+.env
+
+# Archivos generados por el sistema operativo
+desktop.ini
