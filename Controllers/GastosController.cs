@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TrabajoPraactico_Programación3.DTO;
 using TrabajoPraactico_Programación3.Interfaces;
+using TrabajoPraactico_Programación3.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -26,9 +27,18 @@ namespace TrabajoPraactico_Programación3.Controllers
                 return BadRequest(ModelState);
             }
 
-            _GastoService.
+            var GastoCargado = await _GastoService.CargarGasto(createGastoDto);
 
-            return Ok();
+            return CreatedAtAction(nameof(Gastos), new { id = GastoCargado.Id }, GastoCargado);
+
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ObtenerGastos()
+        {
+            var ListaGastos = await _GastoService.ObtenerTodosLosGastos();
+
+            return Ok(ListaGastos);
         }
 
 

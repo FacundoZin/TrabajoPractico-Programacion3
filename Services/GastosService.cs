@@ -21,11 +21,11 @@ namespace TrabajoPraactico_Programación3.Services
 
         public async Task<List<GastoDto>> ObtenerTodosLosGastos()
         {
-            var ListaGastos = await _repository.GetAll();
+            var Gastos = await _repository.GetAll();
 
-            l
+            var ListaGastos = Gastos.Select(G => G.ToGastoDto()).ToList();
 
-            return ListaGastos
+            return ListaGastos;
         }
     }
 }

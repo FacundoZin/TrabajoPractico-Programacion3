@@ -28,6 +28,15 @@ namespace TrabajoPraactico_Programación3.Mappers
             };
         }
 
-        
+        public static GastoDto ToGastoDto (this Gastos gasto)
+        {
+            return new GastoDto
+            {
+                Monto = gasto.Monto,
+                Desccripcion = gasto.Desccripcion,
+                Fecha = gasto.Fecha,
+                NombreComercio = gasto.NombreComercio
+            };
+        }
     }
 }
