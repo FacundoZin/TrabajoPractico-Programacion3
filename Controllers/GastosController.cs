@@ -7,7 +7,7 @@ using TrabajoPraactico_Programación3.Models;
 
 namespace TrabajoPraactico_Programación3.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/gastos")]
     [ApiController]
     public class GastosController : ControllerBase
     {
@@ -29,8 +29,7 @@ namespace TrabajoPraactico_Programación3.Controllers
 
             var GastoCargado = await _GastoService.CargarGasto(createGastoDto);
 
-            return CreatedAtAction(nameof(Gastos), new { id = GastoCargado.Id }, GastoCargado);
-
+            return Created($"/api/gastos/{GastoCargado.Id}", GastoCargado);
         }
 
         [HttpGet]
@@ -40,7 +39,5 @@ namespace TrabajoPraactico_Programación3.Controllers
 
             return Ok(ListaGastos);
         }
-
-
     }
 }

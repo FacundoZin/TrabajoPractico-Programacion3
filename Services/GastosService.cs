@@ -27,5 +27,7 @@ namespace TrabajoPraactico_Programación3.Services
 
             return ListaGastos;
         }
+
+
     }
 }
