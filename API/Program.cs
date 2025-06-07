@@ -19,7 +19,19 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.AddScoped<IGastosRepository, GastosRepository>();
-builder.Services.AddScoped<IGastosServices, GastosService>();   
+builder.Services.AddScoped<IGastosServices, GastosService>();
+
+// configuracion CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("PermitirFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173") // Reemplazar con el puerto del frontend
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -31,7 +43,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseCors("PermitirFrontend");
 app.UseAuthorization();
 
 app.MapControllers();

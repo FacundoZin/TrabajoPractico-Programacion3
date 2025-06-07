@@ -10,7 +10,7 @@ namespace TrabajoPraactico_Programación3.Mappers
             return new Gastos
             {
                 Monto = stockcreado.Monto,
-                Desccripcion = stockcreado.Desccripcion,
+                Desccripcion = stockcreado.Descripcion,
                 Fecha = stockcreado.Fecha,
                 NombreComercio = stockcreado.NombreComercio,
             };

@@ -13,7 +13,7 @@ namespace TrabajoPraactico_Programación3.DTO
 
         [Required(ErrorMessage = "La descripción es obligatoria.")]
         [StringLength(250, MinimumLength = 3, ErrorMessage = "La descripción debe tener entre 3 y 250 caracteres.")]
-        public string Desccripcion { get; set; }
+        public string Descripcion { get; set; }
 
         [Required(ErrorMessage = "La fecha es obligatoria.")]
         [DataType(DataType.Date)]
