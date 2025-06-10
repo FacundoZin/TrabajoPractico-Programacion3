@@ -10,7 +10,7 @@ namespace TrabajoPraactico_Programación3.Mappers
             return new Gastos
             {
                 Monto = stockcreado.Monto,
-                Desccripcion = stockcreado.Descripcion,
+                Descripcion = stockcreado.Descripcion,
                 Fecha = stockcreado.Fecha,
                 NombreComercio = stockcreado.NombreComercio,
             };
@@ -22,7 +22,7 @@ namespace TrabajoPraactico_Programación3.Mappers
             {
                 Id = gasto.Id,
                 Monto = gasto.Monto,
-                Desccripcion = gasto.Desccripcion,
+                Descripcion = gasto.Descripcion,
                 Fecha = gasto.Fecha,
                 NombreComercio = gasto.NombreComercio,
             };
@@ -33,7 +33,7 @@ namespace TrabajoPraactico_Programación3.Mappers
             return new GastoDto
             {
                 Monto = gasto.Monto,
-                Desccripcion = gasto.Desccripcion,
+                Descripcion = gasto.Descripcion,
                 Fecha = gasto.Fecha,
                 NombreComercio = gasto.NombreComercio
             };

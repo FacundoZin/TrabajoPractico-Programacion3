@@ -7,7 +7,7 @@ namespace TrabajoPraactico_Programación3.DTO
     public class GastoDto
     {
         public decimal Monto { get; set; }
-        public string Desccripcion { get; set; }
+        public string Descripcion { get; set; }
         public DateTime Fecha { get; set; }
         public string NombreComercio { get; set; }
     }
